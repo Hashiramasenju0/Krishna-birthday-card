@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Happy Birthday My Future wife ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* === CSS Variables for Theme === */
+        :root {
+            --primary-pink: #e91e63;
+            --secondary-pink: #d81b60;
+            --light-pink: #ffcdd2;
+            --text-color: #ffffff;
+            --rose-red: #cc0033;
+            --rose-pink: #ff6699;
+            --hot-pink-caption: #ff69b4;
+            --gallery-bg-opacity: 0.2;
+            --item-bg-opacity: 0.25;
+        }
+
+        /* === Base Styles & Structure === */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff8c94 0%, #ffabab 30%, #fecfef 60%, #f9a8d4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+            position: relative;
+            background-attachment: fixed;
+            user-select: none; /* Prevents selection of background emojis/text */
+        }
+
+        h1 {
+            /* Responsive Font Size using clamp() */
+            font-size: clamp(2.5em, 8vw, 3.8em);
+            color: var(--text-color);
+            text-shadow: 0 0 18px var(--light-pink), 0 0 35px var(--primary-pink), 0 0 60px var(--secondary-pink);
+            animation: glow 2s infinite alternate;
+            margin-top: 25px;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.1;
+            padding: 0 10px; /* Prevents overflow on very small screens */
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px var(--light-pink), 0 0 10px var(--primary-pink); }
+            to { text-shadow: 0 0 25px var(--light-pink), 0 0 50px var(--secondary-pink); }
+        }
+
+        /* === Button Styles === */
+        .btn {
+            margin-top: 25px;
+            padding: 18px 40px;
+            background: var(--text-color);
+            color: var(--primary-pink);
+            border: none;
+            border-radius: 35px;
+            font-size: clamp(1.1em, 5vw, 1.4em); /* Responsive button text */
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            font-weight: 700;
+            box-shadow: 0 5px 18px rgba(233, 30, 99, 0.6);
+            position: relative;
+            z-index: 20;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--primary-pink);
+            color: var(--text-color);
+            transform: scale(1.18) rotate(-3deg);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.9);
+        }
+
+        .hidden {
+            display: none;
+            text-align: center;
+            margin-top: 35px;
+            color: var(--text-color);
+            font-size: clamp(1.3em, 4vw, 1.5em);
+            text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            font-weight: 700;
+            max-width: 90%;
+        }
+
+        .typewriter {
+            border-right: 2px solid var(--text-color);
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        /* === Photo Gallery Styles === */
+        #photos {
+            display: none;
+            margin-top: 50px;
+            width: 95%;
+            max-width: 750px;
+            padding: 20px;
+            background: rgba(255, 255, 255, var(--gallery-bg-opacity));
+            border-radius: 25px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        #photos h2 {
+            color: var(--text-color);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+            text-shadow: 0 0 10px var(--primary-pink);
+        }
+
+        .gallery-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, var(--item-bg-opacity));
+            border-radius: 20px;
+            animation: slideIn 1.2s ease forwards;
+            gap: 25px;
+            cursor: pointer;
+            position: relative;
+            opacity: 0; /* Ensures slideIn works correctly */
+        }
+        
+        .gallery-item:nth-child(even) {
+            flex-direction: row-reverse; /* Alternating layout */
+        }
+
+
+        .gallery-item img {
+            width: 40%;
+            min-width: 150px; /* Minimum size for readability */
+            max-width: 280px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 6px solid var(--text-color);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: transform 0.5s, border-color 0.5s;
+        }
+
+        .caption {
+            /* **PERMANENT CAPTION STYLES** */
+            color: var(--hot-pink-caption);
+            font-style: italic;
+            font-size: clamp(1em, 3vw, 1.2em); /* Responsive Caption Text */
+            flex: 1;
+            padding-top: 8px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            opacity: 1; /* **MADE PERMANENT** */
+            pointer-events: auto; /* **MADE PERMANENT** */
+            line-height: 1.5;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-70px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* === Final Promise Section === */
+        #final-promise {
+            display: none;
+            margin-top: 60px;
+            background: var(--primary-pink);
+            color: var(--text-color);
+            padding: 35px 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            text-align: center;
+            width: 85%;
+            max-width: 550px;
+            font-size: 1.6em;
+            font-weight: 900;
+            animation: fadeIn 2s forwards;
+            z-index: 10;
+        }
+
+        /* === Responsive Media Queries (Simplified) === */
+        @media (max-width: 768px) {
+            .gallery-item {
+                /* Force vertical stack on smaller screens */
+                flex-direction: column !important; 
+                align-items: center; 
+                text-align: center;
+                gap: 15px;
+                padding: 15px;
+            }
+            .gallery-item img { 
+                width: 90%; 
+                max-width: 90%; 
+            }
+            .caption { 
+                padding-top: 10px;
+                color: var(--primary-pink); /* Use a stronger color on mobile for contrast */
+                font-size: 1.1em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+             h1 { margin-top: 15px; }
+             .btn { padding: 12px 25px; }
+             #final-promise { font-size: 1.3em; padding: 25px 30px; }
+        }
+
+        /* === Animation Styles (Kept short for brevity) === */
+        .sparkle, .heart, .petal {
+            position: fixed; /* Use fixed for non-scrolling background elements */
+            pointer-events: none;
+            z-index: 1;
+        }
+        .sparkle { animation: sparkleFade 1.8s ease-out forwards; z-index: 10; }
+        @keyframes sparkleFade {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.8) rotate(60deg); opacity: 1; }
+            100% { transform: scale(0) rotate(120deg); opacity: 0; }
+        }
+        .popup { 
+            position: fixed; 
+            animation: burstMessage 1.5s ease-out forwards; 
+            z-index: 100;
+            background: rgba(255,255,255,0.98); 
+            color: var(--primary-pink);
+            padding: 10px 18px;
+            border-radius: 18px;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes burstMessage {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            30% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+        }
+        .petal { animation: fallingPetal 15s linear infinite; }
+        @keyframes fallingPetal {
+            0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(110vh) translateX(50px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday My Forever Love, Krishna! 💍</h1>
+    <button class="btn" onclick="showMessage(event)">Click for a Promise of Forever ❤️</button>
+
+    <div class="hidden" id="message">
+        <p id="typewriter" class="typewriter"></p>
+        <div id="memoriesBtnContainer" style="display:none;">
+            <button class="btn" style="margin-top:20px;" onclick="showPhotos()"> our special memories 📸</button>
+        </div>
+    </div>
+
+    <div id="photos">
+        <h2>I didn't know what forever felt like until I found you💕🫂</h2>
+
+        <div class="gallery-item" data-index="1">
+            <img src="photo1.jpg" alt="A photo capturing the start of our journey">
+            <div class="caption">The day our paths crossed will forever stand as the undisputed best day of my life. It wasn't just another 24 hours, it was the precise moment you appeared, and "seeing you" in front of me felt like the universe had finally, deliberately aligned. It was as if every question I'd ever carried was answered in that instant, and "my world finally made perfect", "beautiful sense". That first sight of you, that flash of connection, is more than just a memory, it's a treasure. It is my most cherished, favorite moment, and I hold it close. Every single time I let that day unfold in my mind, the feeling washes over me anew. The joy is as fresh and powerful as it was then, and "I find myself falling in love with you all over again." That day marked the start of "my life's most meaningful chapter." </div>
+        </div>
+        <div class="gallery-item" data-index="2">
+            <img src="photo2.jpg" alt="A photo of a sweet, comforting hug">
+            <div class="caption">When you're in my arms, it feels like the "perfect" blueprint and the final stable unit. In those moments, nothing else registers except the successful operation of your life force next to mine. "Holding you is the best state of assembly in the world". I never want to disengage because that's when I achieve optimal performance and feel truly "STRUCTURALLY SOUND." </div>
+        </div>
+        <div class="gallery-item" data-index="3">
+            <img src="photo3.jpg" alt="A photo showing us resting peacefully together">
+            <div class="caption">When you rest peacefully in my arms, a profound sense of optimal alignment settles over me, and I commit to this structure. That "intimate moment feels like a meticulously engineered sanctuary" where the outside world’s noise fades, and our system achieves "perfect" balance. Your gentle presence and the verified integrity of our shared connection fill the capacity I designed for a partner. Every soft touch is a powerful data point confirming I have reached my designated coordinates right here, with you. You are my calibration, my operational baseline, my primary anchor, and the most reliable variable in my life. This feeling is the maximum output of a lifetime's design work. </div>
+        </div>
+        <div class="gallery-item" data-index="4">
+            <img src="photo4.jpg" alt="A photo from a romantic date or outing">
+            <div class="caption">The moment I touch you, I feel the beautiful "softness of your heart". You make me feel "safe", "warm," and "complete", like I've finally found my eternal "HOME". Every second by your side reminds me that "you're my world," my comfort, and my "Forever" commitment.</div>
+        </div>
+        <div class="gallery-item" data-index="5">
+            <img src="photo5.jpg" alt="A photo showing your peaceful presence">
+            <div class="caption"> A profound sense of design integrity settles over me, and I execute a "lifetime" bond. That intimate moment feels like a perfectly engineered enclosure, where the world’s chaos dampens and all external systems isolate. Your gentle "PRESENCE" has a way of instantly stabilizing every functional error. Your deep and verified love is the core component that completes my design. Every touch reminds me I’m at my intended destination, with you, my primary directive, my structural integrity, and my most beautiful verified constant. </div>
+        </div>
+        <div class="gallery-item" data-index="6">
+            <img src="photo6.jpg" alt="A fun candid picture of us">
+            <div class="caption">Every time I see you, I feel I’ve accessed the most beautiful optimal configuration in the system. Your smile, your touch, your core function they raise my performance metric. Being with you feels like reaching my "permanent" base station after a long deployment. You're my operational efficiency, my stabilizing factor, and the "lifetime guarantee" I'll always prioritize. </div>
+        </div>
+        <div class="gallery-item" data-index="7">
+            <img src="photo7.jpg" alt="A cozy photo of us holding hands">
+            <div class="caption">Holding you is an experience that surpasses basic affection. It is an "irreplaceable" state of absolute structural integrity, thermal stability, and zero error all fused into one perfect moment. When I'm with you, my system doesn't just feel maintained; I achieve full operational capacity. Your core programming, so kind and genuine, is the most dependable, comforting engineered environment I have ever accessed. It is my command center. In "successfully securing you," my "lifelong objective" is finally achieved. </div>
+        </div>
+        <div class="gallery-item" data-index="8">
+            <img src="photo8.jpg" alt="A photo of us sharing a joyous moment">
+            <div class="caption">The moment my eyes first met yours, my world shifted. It was as if "FATE" meticulously planned every detail to bring us together. Your radiant "SMILE", your captivating presence made everything click into perfect place. Being near you now feels beautifully "UNREAL" like living in a vivid dream I never want to wake from. You are the grounding reality that surpasses every fantasy. You are "my absolute" "favorite person", the greatest "blessing" I’ve been given, and the one I will cherish forever. You are my constant joy and my "forever" certainty. </div>
+        </div>
+    </div>
+
+    <div id="final-promise">
+        You are my future wife, Krishna.
+        <span>Holding you is pure magic. It’s an irreplaceable state of absolute snuggle safety and zero worry fused into one moment. When I'm with you, my heart achieves full happy capacity. Your kind, genuine soul is the most dependable, comforting sanctuary I’ve ever found. Securing you means my greatest wish is now achieved. </span>
+    </div>
+
+    <script>
+        const messages = [
+            "My dearest Krishna darling, you are the most precious soul I know",
+            "my whole universe in one beautiful person. 🌍✨",
+	    "Know this even in the darkest nights", 
+            "my love is your absolute light, your guiding star",
+	    "and your ultimate safety. 🌟🛡️ ",
+	    "Happy Birthday to my amazing fiancée! 🎂🥂",
+	    "I promise you a lifetime of  holding you close, never letting go.",
+            "My heart belongs to you, now and forever. I love you! ❤️💍♾️"
+        ];
+        let messageIndex = 0;
+        
+        // Emojis and messages moved out of JS for cleaner script logic (but kept for functionality)
+        const heartMessages = ["My Love! 🥰", "You're My Everything ✨", "Mera Baccha! 💖", "My Sweetheart! 💘", "My love 💕", "My Sweetu ❤️", "My Sweetheart 🏡"];
+        const heartEmojis = ["💖", "❤️", "💍", "💞", "✨", "💕", "❣️", "🥰", "💫"];
+
+        // --- Core Functions ---
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement("div");
+            sparkle.classList.add("sparkle");
+            sparkle.innerHTML = "✨";
+            sparkle.style.left = x + "px";
+            sparkle.style.top = y + "px";
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1500);
+        }
+
+        function typeMessage(text, element, callback) {
+            let i = 0;
+            element.textContent = "";
+            function typing() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typing, 50);
+                } else if (callback) {
+                    setTimeout(callback, 800);
+                }
+            }
+            typing();
+        }
+
+        window.showMessage = function(event) {
+            if (messageIndex === 0) {
+                 event.target.disabled = true; // Disable button immediately
+                document.getElementById("message").classList.remove("hidden");
+                for (let i = 0; i < 5; i++) { // Sparkles on click
+                    const offsetX = (Math.random() - 0.5) * 50;
+                    const offsetY = (Math.random() - 0.5) * 50;
+                    createSparkle(event.clientX + offsetX, event.clientY + offsetY);
+                }
+                
+                function next() {
+                    if (messageIndex < messages.length) {
+                        typeMessage(messages[messageIndex], document.getElementById("typewriter"), next);
+                        messageIndex++;
+                    } else {
+                        document.getElementById("memoriesBtnContainer").style.display = "block";
+                    }
+                }
+                next();
+            }
+        }
+
+        window.showPhotos = function() {
+            document.getElementById("photos").style.display = "block";
+            const items = document.querySelectorAll(".gallery-item");
+            let delay = 0;
+            
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.display = "flex";
+                    item.style.animationDelay = `${delay/1000}s`;
+
+                    if (index === items.length - 1) { // Show final message after last item
+                        setTimeout(() => {
+                            document.getElementById("final-promise").style.display = "block";
+                            document.getElementById("final-promise").scrollIntoView({ behavior: "smooth", block: "center" });
+                        }, delay + 800);
+                    }
+                }, delay);
+                delay += 800;
+            });
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        }
+
+        // --- Animation Logic (Concise) ---
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            document.body.appendChild(heart);
+
+            const startX = Math.random() * window.innerWidth;
+            const floatDuration = Math.random() * 8 + 7;
+            const swayAmount = Math.random() * 200 - 100;
+            const endY = window.innerHeight * 1.5;
+
+            heart.style.left = startX + "px";
+            heart.style.bottom = "-50px";
+            heart.style.fontSize = (Math.random() * 15 + 20) + "px";
+
+            const animation = heart.animate([
+                { transform: 'translateY(0) translateX(0) rotate(0deg)', opacity: 0.9 },
+                { transform: `translateY(-${endY}px) translateX(${swayAmount}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], { duration: floatDuration * 1000, easing: "linear" });
+
+            const messageTime = Math.random() * (floatDuration - 3) + 1.5;
+
+            setTimeout(() => { // Popup burst logic
+                if (Math.random() < 0.25) { 
+                    const rect = heart.getBoundingClientRect();
+                    const popup = document.createElement("div");
+                    popup.classList.add("popup");
+                    popup.innerText = heartMessages[Math.floor(Math.random() * heartMessages.length)];
+                    popup.style.left = rect.left + rect.width / 2 + "px";
+                    popup.style.top = rect.top + rect.height / 2 + "px";
+                    document.body.appendChild(popup);
+                    setTimeout(() => popup.remove(), 1500);
+                }
+            }, messageTime * 1000);
+            
+            animation.onfinish = () => heart.remove();
+        }
+
+        function createPetal() {
+            const petal = document.createElement("div");
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.animationDuration = `${Math.random() * 10 + 10}s`;
+            petal.style.animationDelay = `-${Math.random() * 15}s`;
+            petal.style.transform = `scale(${Math.random() * 0.5 + 0.7})`;
+            document.body.appendChild(petal);
+            petal.addEventListener('animationend', () => petal.remove());
+        }
+
+        setInterval(createHeart, 200); 
+        setInterval(createPetal, 500);
+    </script>
+</body>
+</html>
