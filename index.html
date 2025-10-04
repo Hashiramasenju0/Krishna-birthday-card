@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Happy Birthday My Future wife 💕❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Happy Birthday My Beautiful Krishna ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* === CSS Variables for Theme === */
+        /* === CSS Variables for a Softer, Cuter Theme === */
         :root {
-            --primary-pink: #e91e63;
-            --secondary-pink: #d81b60;
-            --light-pink: #ffcdd2;
-            --text-color: #ffffff;
-            --rose-red: #cc0033;
-            --rose-pink: #ff6699;
-            --hot-pink-caption: #ff69b4;
-            --gallery-bg-opacity: 0.2;
-            --item-bg-opacity: 0.25;
-            /* Added for mobile contrast in captions */
-            --mobile-caption-color: #d81b60; 
+            --primary-color: #F780A1; /* Soft Rose Pink */
+            --secondary-color: #E63973; /* Deeper Blush */
+            --light-accent: #FFFAF0; /* Ivory/Cream */
+            --text-color: #4B0082; /* Deep Indigo for contrast */
+            --button-text-color: #FFFFFF; /* White */
+            --caption-text: #E63973; /* Deep Blush for captions */
+            --gallery-bg-opacity: 0.15;
+            --item-bg-opacity: 0.3;
         }
 
         /* === Base Styles & Structure === */
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ff8c94 0%, #ffabab 30%, #fecfef 60%, #f9a8d4 100%);
+            /* Soft, dreamy background gradient */
+            background: linear-gradient(135deg, #FFC0CB 0%, #F0F8FF 40%, #FFE4E1 100%); 
             min-height: 100vh;
             display: flex;
             justify-content: flex-start;
@@ -35,60 +33,59 @@
             padding-bottom: 80px;
             position: relative;
             background-attachment: fixed;
-            user-select: none; /* Prevents selection of background emojis/text */
+            user-select: none;
         }
 
         h1 {
-            /* Responsive Font Size using clamp() */
-            font-size: clamp(2.5em, 8vw, 3.8em);
-            color: var(--text-color);
-            text-shadow: 0 0 18px var(--light-pink), 0 0 35px var(--primary-pink), 0 0 60px var(--secondary-pink);
-            animation: glow 2s infinite alternate;
-            margin-top: 25px;
+            font-family: 'Dancing Script', cursive; /* Elegant font for title */
+            font-size: clamp(3em, 10vw, 4.5em);
+            color: var(--secondary-color);
+            /* Soft glow effect */
+            text-shadow: 0 0 10px var(--primary-color), 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: glow 3s infinite alternate;
+            margin-top: 30px;
             text-align: center;
-            font-weight: 900;
-            letter-spacing: 1px;
+            font-weight: 700;
             line-height: 1.1;
-            padding: 0 10px; /* Prevents overflow on very small screens */
+            padding: 0 10px;
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 5px var(--light-pink), 0 0 10px var(--primary-pink); }
-            to { text-shadow: 0 0 25px var(--light-pink), 0 0 50px var(--secondary-pink); }
+            from { text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--secondary-color); }
+            to { text-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--secondary-color); }
         }
 
         /* === Button Styles === */
         .btn {
-            margin-top: 25px;
-            padding: 18px 40px;
-            background: var(--text-color);
-            color: var(--primary-pink);
+            margin-top: 35px;
+            padding: 16px 35px;
+            background: var(--primary-color);
+            color: var(--button-text-color);
             border: none;
-            border-radius: 35px;
-            font-size: clamp(1.1em, 5vw, 1.4em); /* Responsive button text */
+            border-radius: 30px;
+            font-size: clamp(1.1em, 5vw, 1.3em);
             cursor: pointer;
             transition: all 0.4s ease-in-out;
             font-weight: 700;
-            box-shadow: 0 5px 18px rgba(233, 30, 99, 0.6);
+            box-shadow: 0 4px 15px rgba(247, 128, 161, 0.7);
             position: relative;
             z-index: 20;
-            text-align: center;
+            letter-spacing: 0.5px;
         }
 
         .btn:hover {
-            background: var(--primary-pink);
-            color: var(--text-color);
-            transform: scale(1.18) rotate(-3deg);
-            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.9);
+            background: var(--secondary-color);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(230, 57, 115, 0.9);
         }
 
         .hidden {
             display: none;
             text-align: center;
-            margin-top: 35px;
+            margin-top: 40px;
             color: var(--text-color);
-            font-size: clamp(1.3em, 4vw, 1.5em);
-            text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+            font-size: clamp(1.4em, 4vw, 1.6em);
+            text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
             padding: 15px;
             font-weight: 700;
             max-width: 90%;
@@ -109,16 +106,17 @@
             max-width: 750px;
             padding: 20px;
             background: rgba(255, 255, 255, var(--gallery-bg-opacity));
-            border-radius: 25px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         #photos h2 {
-            color: var(--text-color);
+            font-family: 'Dancing Script', cursive;
+            color: var(--secondary-color);
             margin-bottom: 30px;
             text-align: center;
-            font-size: 2em;
-            text-shadow: 0 0 10px var(--primary-pink);
+            font-size: 2.5em;
+            text-shadow: 0 0 8px var(--primary-color);
         }
 
         .gallery-item {
@@ -129,69 +127,67 @@
             background: rgba(255, 255, 255, var(--item-bg-opacity));
             border-radius: 20px;
             animation: slideIn 1.2s ease forwards;
-            gap: 25px;
+            gap: 20px;
             cursor: pointer;
             position: relative;
-            opacity: 0; /* Ensures slideIn works correctly */
+            opacity: 0;
         }
         
         .gallery-item:nth-child(even) {
-            flex-direction: row-reverse; /* Alternating layout */
+            flex-direction: row-reverse;
         }
 
-
         .gallery-item img {
-            width: 40%;
-            min-width: 150px; /* Minimum size for readability */
-            max-width: 280px;
+            width: 45%; 
+            min-width: 160px;
+            max-width: 300px;
             height: auto;
             object-fit: cover;
-            border-radius: 25px;
-            border: 6px solid var(--text-color);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border-radius: 20px;
+            border: 5px solid var(--light-accent); 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
             transition: transform 0.5s, border-color 0.5s;
         }
 
         .caption {
-            /* **PERMANENT CAPTION STYLES** */
-            color: var(--hot-pink-caption);
+            color: var(--caption-text);
             font-style: italic;
-            font-size: clamp(1em, 3vw, 1.2em); /* Responsive Caption Text */
+            /* FINAL REDUCED SIZE FOR SUBTLE CAPTIONS */
+            font-size: clamp(0.9em, 2.5vw, 1.1em); 
             flex: 1;
-            padding-top: 8px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-            opacity: 1; /* **MADE PERMANENT** */
-            pointer-events: auto; /* **MADE PERMANENT** */
-            line-height: 1.5;
+            padding-top: 10px;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+            opacity: 1;
+            pointer-events: auto;
+            line-height: 1.6;
         }
 
         @keyframes slideIn {
-            from { transform: translateX(-70px); opacity: 0; }
+            from { transform: translateX(-50px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
 
         /* === Final Promise Section === */
         #final-promise {
             display: none;
-            margin-top: 60px;
-            background: var(--primary-pink);
-            color: var(--text-color);
-            padding: 35px 45px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            margin-top: 70px;
+            background: var(--secondary-color);
+            color: var(--button-text-color);
+            padding: 40px 50px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
-            width: 85%;
-            max-width: 550px;
-            font-size: 1.6em;
-            font-weight: 900;
+            width: 80%;
+            max-width: 580px;
+            font-size: 1.7em;
+            font-weight: 700;
             animation: fadeIn 2s forwards;
             z-index: 10;
         }
 
-        /* === Responsive Media Queries (Simplified) === */
+        /* === Responsive Media Queries === */
         @media (max-width: 768px) {
             .gallery-item {
-                /* Force vertical stack on smaller screens */
                 flex-direction: column !important; 
                 align-items: center; 
                 text-align: center;
@@ -203,22 +199,21 @@
                 max-width: 90%; 
             }
             .caption { 
-                padding-top: 10px;
-                /* Using a deeper color for better mobile contrast against the light pink background */
-                color: var(--mobile-caption-color); 
-                font-size: 1.1em;
+                color: var(--secondary-color); 
+                /* FINAL REDUCED SIZE FOR MOBILE */
+                font-size: 1em; 
             }
         }
         
         @media (max-width: 480px) {
-             h1 { margin-top: 15px; }
-             .btn { padding: 12px 25px; }
-             #final-promise { font-size: 1.3em; padding: 25px 30px; }
+             h1 { margin-top: 20px; }
+             .btn { padding: 14px 28px; }
+             #final-promise { font-size: 1.4em; padding: 30px 35px; }
         }
 
-        /* === Animation Styles (Kept short for brevity) === */
+        /* === Animation Styles === */
         .sparkle, .heart, .petal {
-            position: fixed; /* Use fixed for non-scrolling background elements */
+            position: fixed;
             pointer-events: none;
             z-index: 1;
         }
@@ -233,17 +228,22 @@
             animation: burstMessage 1.5s ease-out forwards; 
             z-index: 100;
             background: rgba(255,255,255,0.98); 
-            color: var(--primary-pink);
-            padding: 10px 18px;
-            border-radius: 18px;
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 15px;
             transform: translate(-50%, -50%);
         }
         @keyframes burstMessage {
             0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-            30% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
-            100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+            30% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
         }
-        .petal { animation: fallingPetal 15s linear infinite; }
+        .petal { 
+            animation: fallingPetal 15s linear infinite; 
+            /* Added softer color/emoji for petals */
+            color: #FFB6C1; 
+            font-size: 1.2em;
+        }
         @keyframes fallingPetal {
             0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0.8; }
             100% { transform: translateY(110vh) translateX(50px) rotate(360deg); opacity: 0; }
@@ -251,18 +251,18 @@
     </style>
 </head>
 <body>
-    <h1>Happy Birthday My Forever Love, Krishna! 💍</h1>
-    <button class="btn" onclick="showMessage(event)">Click for a Promise of Forever ❤️</button>
+    <h1>Happy Birthday My Beautiful Krishna ✨</h1>
+    <button class="btn" onclick="showMessage(event)">Click for a Promise of Forever 💖</button>
 
     <div class="hidden" id="message">
         <p id="typewriter" class="typewriter"></p>
         <div id="memoriesBtnContainer" style="display:none;">
-            <button class="btn" style="margin-top:20px;" onclick="showPhotos()"> our special memories 📸</button>
+            <button class="btn" style="margin-top:25px;" onclick="showPhotos()"> See Our Sweetest Memories 📸</button>
         </div>
     </div>
 
     <div id="photos">
-        <h2>I didn't know what forever felt like until I found you💕🫂</h2>
+        <h2>I didn't know what forever felt like until I found you 🌹🫂</h2>
 
         <div class="gallery-item" data-index="1">
             <img src="photo1.jpg" alt="A photo capturing the start of our journey">
@@ -300,7 +300,7 @@
 
     <div id="final-promise">
         You are my future wife, Krishna.
-        <span>Holding you is pure magic. It’s an irreplaceable state of absolute snuggle safety and zero worry fused into one moment. When I'm with you, my heart achieves full happy capacity. Your kind, genuine soul is the most dependable, comforting sanctuary I’ve ever found. Securing you means my greatest wish is now achieved. </span>
+        <span>Holding you is pure magic. It’s an irreplaceable state of absolute "snuggle safety" and "zero worry" fused into one moment. When I'm with you, my heart achieves "full happy capacity". Your kind, genuine soul is the most dependable, comforting "sanctuary" I’ve ever found. Securing you means my greatest "wish is now achieved". </span>
     </div>
 
     <script>
@@ -316,9 +316,9 @@
         ];
         let messageIndex = 0;
         
-        // Emojis and messages moved out of JS for cleaner script logic (but kept for functionality)
-        const heartMessages = ["My Love! 🥰", "You're My Everything ✨", "Mera Baccha! 💖", "My Sweetheart! 💘", "My love 💕", "My Sweetu ❤️", "My Sweetheart 🏡"];
-        const heartEmojis = ["💖", "❤️", "💍", "💞", "✨", "💕", "❣️", "🥰", "💫"];
+        // Emojis updated to be cuter/softer
+        const heartMessages = ["My Sweetheart! 💖", "You're My Everything 🥰", "Mera Pyara Baccha! 🧸", "My Cutie Pie! 🌸", "My Sweetu Bear 🍯", "My Precious Love 💍", "My happy place 🏡"];
+        const heartEmojis = ["💖", "🌸", "✨", "💕", "❣️", "🥰", "💫", "💘"]; 
 
         // --- Core Functions ---
 
@@ -349,9 +349,9 @@
 
         window.showMessage = function(event) {
             if (messageIndex === 0) {
-                 event.target.disabled = true; // Disable button immediately
+                 event.target.disabled = true; 
                 document.getElementById("message").classList.remove("hidden");
-                for (let i = 0; i < 5; i++) { // Sparkles on click
+                for (let i = 0; i < 5; i++) { 
                     const offsetX = (Math.random() - 0.5) * 50;
                     const offsetY = (Math.random() - 0.5) * 50;
                     createSparkle(event.clientX + offsetX, event.clientY + offsetY);
@@ -376,12 +376,11 @@
             
             items.forEach((item, index) => {
                 setTimeout(() => {
-                    // Set display after a short delay to ensure animation starts from the hidden state
                     item.style.display = "flex"; 
-                    item.style.animationDelay = `0s`; // Delay is handled by the setTimeout wrap
-                    item.style.animationName = 'slideIn'; // Re-apply animation name to force restart if needed
+                    item.style.animationDelay = `0s`; 
+                    item.style.animationName = 'slideIn'; 
 
-                    if (index === items.length - 1) { // Show final message after last item
+                    if (index === items.length - 1) { 
                         setTimeout(() => {
                             document.getElementById("final-promise").style.display = "block";
                             document.getElementById("final-promise").scrollIntoView({ behavior: "smooth", block: "center" });
@@ -390,7 +389,6 @@
                 }, delay);
                 delay += 800;
             });
-            // Ensure smooth scroll is possible after initial elements load
             window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
         }
 
@@ -418,7 +416,7 @@
 
             const messageTime = Math.random() * (floatDuration - 3) + 1.5;
 
-            setTimeout(() => { // Popup burst logic
+            setTimeout(() => { 
                 if (Math.random() < 0.25) { 
                     const rect = heart.getBoundingClientRect();
                     const popup = document.createElement("div");
@@ -434,9 +432,11 @@
             animation.onfinish = () => heart.remove();
         }
 
+        // Use a petal emoji for the falling effect for cuter aesthetic
         function createPetal() {
             const petal = document.createElement("div");
             petal.classList.add("petal");
+            petal.innerHTML = "🌸"; 
             petal.style.left = Math.random() * 100 + "vw";
             petal.style.animationDuration = `${Math.random() * 10 + 10}s`;
             petal.style.animationDelay = `-${Math.random() * 15}s`;
