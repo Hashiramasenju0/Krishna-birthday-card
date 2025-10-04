@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Happy Birthday My Future wife ❤️</title>
+    <title>Happy Birthday My Future wife 💕❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         /* === CSS Variables for Theme === */
@@ -17,6 +17,8 @@
             --hot-pink-caption: #ff69b4;
             --gallery-bg-opacity: 0.2;
             --item-bg-opacity: 0.25;
+            /* Added for mobile contrast in captions */
+            --mobile-caption-color: #d81b60; 
         }
 
         /* === Base Styles & Structure === */
@@ -202,7 +204,8 @@
             }
             .caption { 
                 padding-top: 10px;
-                color: var(--primary-pink); /* Use a stronger color on mobile for contrast */
+                /* Using a deeper color for better mobile contrast against the light pink background */
+                color: var(--mobile-caption-color); 
                 font-size: 1.1em;
             }
         }
@@ -304,11 +307,11 @@
         const messages = [
             "My dearest Krishna darling, you are the most precious soul I know",
             "my whole universe in one beautiful person. 🌍✨",
-	    "Know this even in the darkest nights", 
+            "Know this: even in the darkest nights", 
             "my love is your absolute light, your guiding star",
-	    "and your ultimate safety. 🌟🛡️ ",
-	    "Happy Birthday to my amazing fiancée! 🎂🥂",
-	    "I promise you a lifetime of  holding you close, never letting go.",
+            "and your ultimate safety. 🌟🛡️ ",
+            "Happy Birthday to my amazing fiancée! 🎂🥂",
+            "I promise you a lifetime of holding you close, never letting go.",
             "My heart belongs to you, now and forever. I love you! ❤️💍♾️"
         ];
         let messageIndex = 0;
@@ -373,8 +376,10 @@
             
             items.forEach((item, index) => {
                 setTimeout(() => {
-                    item.style.display = "flex";
-                    item.style.animationDelay = `${delay/1000}s`;
+                    // Set display after a short delay to ensure animation starts from the hidden state
+                    item.style.display = "flex"; 
+                    item.style.animationDelay = `0s`; // Delay is handled by the setTimeout wrap
+                    item.style.animationName = 'slideIn'; // Re-apply animation name to force restart if needed
 
                     if (index === items.length - 1) { // Show final message after last item
                         setTimeout(() => {
@@ -385,6 +390,7 @@
                 }, delay);
                 delay += 800;
             });
+            // Ensure smooth scroll is possible after initial elements load
             window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
         }
 
